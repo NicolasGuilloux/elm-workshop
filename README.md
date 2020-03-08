@@ -4,6 +4,14 @@
 This is a Elm workshop to learn Elm more easily.
 
 
+## Begin the workshop
+
+To begin, execute `elm-workshop init` to generate a unique ID and to save your pseudo. It will be sent to the website to track your progression.
+
+Then, execute in a terminal `elm-workshop daemon` (a mirror to `elm reactor`) that creates a web server accessible from http://localhost:8000 and that will compile your Elm scripts.
+
+Finally, if you want to test your step, execute `elm-workshop test` from the step folder. And if you want to validate and send to the server your progression, execute `elm-workshop test-all`.
+
 
 ## Commands
 

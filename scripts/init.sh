@@ -4,6 +4,11 @@
 script_path="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )/..";
 storage="$script_path/config";
 
+if [ -f "$storage" ]; then
+    echo "You already initialized the workshop.";
+    exit 1;
+fi
+
 echo "Hi mate :) Can you type your pseudo please ? ";
 read pseudo;
 echo "";
