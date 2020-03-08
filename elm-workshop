@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+
+script_path="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )";
+
+# Initialize the Elm Workshop
+if [ "$1" = "init" ]; then
+    $script_path/scripts/init.sh
+
+## Execute elm reactor
+elif [ "$1" = "daemon" ]; then
+    $script_path/elm reactor
+
+# Test the actual Step
+elif [ "$1" = "test" ]; then
+    $script_path/scripts/test.sh
+
+# Test all steps and send the result to the server
+elif [ "$1" = "test-all" ]; then
+    $script_path/scripts/test-all.sh
+fi
