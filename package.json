@@ -9,7 +9,7 @@
   "scripts": {
     "build": "parcel build assets/app.js --out-dir ./extension/static",
     "watch": "parcel watch assets/app.js --out-dir ./extension/static --hmr-hostname localhost",
-    "build-crx": "crx pack ./extension --output ElmDashboard.crx"
+    "build-crx": "crx pack ./extension --output ElmDashboard_Chrome.crx"
   },
   "devDependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
