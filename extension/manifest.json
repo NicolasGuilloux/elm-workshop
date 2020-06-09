@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "name": "Elm Dashboard",
+    "version": "1.0",
+    "description": "A beautiful dashboard for your favorite browser.",
+    "icons": {
+        "48": "images/icon-48.png"
+    },
+    "chrome_url_overrides" : {
+        "newtab": "index.html"
+    },
+    "chrome_settings_overrides" : {
+        "homepage": "index.html"
+    }
+  }
