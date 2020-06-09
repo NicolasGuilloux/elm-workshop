@@ -14,3 +14,7 @@
 /extension/static
 /*.crx
 /*.pem
+
+# Nix environement
+/.envrc
+/shell.nix
