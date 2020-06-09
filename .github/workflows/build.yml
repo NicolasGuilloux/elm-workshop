@@ -18,11 +18,13 @@ jobs:
             - name: Build assets
               run: yarn run build
 
-            - name: Build CRX file
-              run: yarn run build-crx
+            - name: Build CRX files
+              run: |
+                  yarn run build-crx
+                  yarn run build-crx3
 
             - name: Upload CRX file
               uses: actions/upload-artifact@v2-preview
               with:
                 name: ElmDashboard_Chrome
-                path: ElmDashboard_Chrome.crx
+                path: *.(crx|zip)
