@@ -1,2 +1,20 @@
-# Avoid pushing configuration
-/config
+# Editors
+/.vscode
+/.idea
+
+# NodeJS
+/.cache
+/node_modules
+
+# Elm
+/elm-stuff
+/assets/elm/Libs
+
+# Generated files
+/extension/static
+/*.crx
+/*.pem
+
+# Nix environement
+/.envrc
+/shell.nix

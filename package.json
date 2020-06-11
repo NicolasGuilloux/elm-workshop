@@ -1,0 +1,31 @@
+{
+  "name": "elm-dashboard",
+  "version": "1.0.0",
+  "description": "A beautiful dashboard for your favorite browser.",
+  "main": "assets/app.js",
+  "repository": "git@gitlab.com:NicolasGuilloux/elm-workshop.git",
+  "author": "Nicolas Guilloux",
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel build assets/app.js --out-dir ./extension/static",
+    "watch": "parcel watch assets/app.js --out-dir ./extension/static --hmr-hostname localhost",
+    "build-crx": "crx pack ./extension --output ElmDashboard_Old_Chrome.crx",
+    "build-crx3": "crx pack ./extension --output ElmDashboard_Chrome.crx"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "@fortawesome/free-brands-svg-icons": "^5.13.0",
+    "@fortawesome/free-regular-svg-icons": "^5.13.0",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "elm-debug-transformer": "^1.0.4",
+    "elm-hot": "^1.1.4",
+    "node-elm-compiler": "^5.0.4",
+    "parcel": "^1.12.4",
+    "sass": "^1.26.5"
+  },
+  "dependencies": {
+    "crx": "^5.0.1",
+    "crx3": "^1.1.2"
+  }
+}
