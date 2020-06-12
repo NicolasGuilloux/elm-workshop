@@ -2,8 +2,6 @@
 
 I will not describe what NodeJS does exactly, neither how the SCSS works. NodeJS builds the assets using [Parcel](https://parceljs.org/) and put them in `/public/static`. SCSS gives the style of your application. If you want to learn more, I let you Google it.
 
-I will not describe what NodeJS does exactly, neither how the SCSS works. NodeJS builds the assets using [Parcel](https://parceljs.org/) and put them in `/public/static`.
-
 
 ## Folder arborescence
 
@@ -56,7 +54,7 @@ One last thing. You can notice something like `let ... in`. This is where you ca
 
 ### Model
 
-Elm stores **every** variables within its Model. You can create ephemeral variables, but then will never last more than 1 cycle. I'll explain what it after. So the Model should be declared carefully. A mess in your Model is a mess for the whole page. But you will be careful, I am sure!
+Elm stores **every** variables within its Model. You can create ephemeral variables, but then will never last more than 1 cycle. I'll explain what it means after. So the Model should be declared carefully. A mess in your Model is a mess for the whole page. But you will be careful, I am sure!
 
 The first thing you will do when creating a new page is creating the Model type alias. A type alias is like an associative array in other languages. It mean in Elm that this type alias is a combination of multiple types.
 
@@ -179,7 +177,11 @@ init flags =
 
 ### Subscriptions
 
-You can notice that there is something called subscriptions. This is useful to get data from the outside world and trigger an update cycle. We will not use it for this Dashboard and should be avoided in general because it can be a side effect.
+You can notice that there is something called subscriptions. This is useful to get data from the outside world and trigger an update cycle.
+
+When creating a subscription, Elm expsoes functions called ports that is accessible from the outside world (the Javascript). When called, it triggers an update cycle with the message attach to this port.
+
+We will not use any subscription in this Dashboard. That is why in the `main` function, you can find that we do nothing: `subscriptions = \_ -> Sub.none`.
 
 
 ### Summary
@@ -192,8 +194,8 @@ The `Model` edited updates the view (`Html`), which can trigger a new update cyc
 
 Note the `Html`, the `Cmd` and the `Sub` are the only elements that can trigger an update cycle using a `Msg`. This is why they are written `Html Msg`, `Cmd Msg` and `Sub Msg`, because they are always associated with a message.
 
-### Bonus: Composition
 
+### Bonus: Composition
 
 I told you about composition. Lets scratch the surface with an example. We want to use `myFunction` but we would like to give the `b` value first. This case is nothing special, it happens quite regulary. 
 

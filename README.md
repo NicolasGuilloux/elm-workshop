@@ -18,7 +18,7 @@ This is a list of all features that we will bring to our extension.
  - The weather
 
 
- ## Workshop
+## Workshop
 
  You are ready to begin? Alright! Just follow the documentation and enjoy :)
 
